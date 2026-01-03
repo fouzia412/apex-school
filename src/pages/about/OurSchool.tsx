@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Award, Users, BookOpen, Trophy, Target, Heart } from 'lucide-react';
 import heroCampus from '@/assets/hero-campus.jpg';
 
+// OurSchool page component
 const OurSchool = () => {
   return (
     <>
