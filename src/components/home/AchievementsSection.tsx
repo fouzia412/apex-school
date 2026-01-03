@@ -44,31 +44,28 @@ export const AchievementsSection = () => {
   const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!cardsRef.current) return;
+  if (!cardsRef.current || !sectionRef.current) return;
 
-    const cards = cardsRef.current.children;
+  const cards = cardsRef.current.children;
 
-    gsap.fromTo(
-      cards,
-      { opacity: 0, y: 60, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 70%',
-        },
-      }
-    );
+  gsap.from(cards, {
+    y: 60,
+    scale: 0.95,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: sectionRef.current,
+      start: 'top 85%',
+      toggleActions: 'play none none none',
+    },
+  });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
+  return () => {
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+  };
+}, []);
+
 
   return (
     <section ref={sectionRef} className="section-padding relative overflow-hidden">
@@ -88,7 +85,7 @@ export const AchievementsSection = () => {
         </div>
 
         {/* Achievement Cards */}
-        <div ref={cardsRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div ref={cardsRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 opacity-100">
           {achievements.map((achievement) => (
             <motion.div
               key={achievement.id}

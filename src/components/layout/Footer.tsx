@@ -60,7 +60,7 @@ export const Footer = () => {
       </div>
 
       {/* Wave Separator */}
-      <div className="absolute -top-1 left-0 w-full overflow-hidden leading-none rotate-180">
+      {/* <div className="absolute -top-1 left-0 w-full overflow-hidden leading-none rotate-180">
         <svg
           className="relative block w-full h-20 md:h-24"
           viewBox="0 0 1200 120"
@@ -71,7 +71,7 @@ export const Footer = () => {
             fill="hsl(var(--background))"
           />
         </svg>
-      </div>
+      </div> */}
 
       {/* Newsletter Section */}
       <div className="container mx-auto px-4 pt-32 pb-12">
@@ -106,177 +106,147 @@ export const Footer = () => {
           </div>
         </motion.div>
 
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
-          {/* Brand Section */}
-          <div className="lg:col-span-2">
-            <motion.div
-              className="flex items-center gap-4 mb-6"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-gold flex items-center justify-center text-secondary-foreground font-heading font-bold text-2xl shadow-gold">
-                  DPS
-                </div>
-                <motion.div
-                  className="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
-              </div>
-              <div>
-                <h3 className="font-heading font-bold text-2xl">Delhi Public School</h3>
-                <p className="text-primary-foreground/70">Hyderabad</p>
-              </div>
-            </motion.div>
-            <p className="text-primary-foreground/80 mb-6 leading-relaxed max-w-md">
-              Nurturing future leaders through academic excellence, holistic development, and a commitment to values that inspire lifelong learning. Celebrating 23 years of educational excellence.
-            </p>
-            
-            {/* Social Links */}
-            <div className="flex gap-3">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all border border-white/10 hover:border-secondary"
-                  aria-label={social.label}
-                >
-                  {socialIconMap[social.icon]}
-                </motion.a>
-              ))}
-            </div>
-          </div>
+     {/* Main Footer Content */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
-              <Globe className="w-5 h-5 text-secondary" />
-              Quick Links
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.quickLinks.map((link, index) => (
-                <motion.li
-                  key={link.label}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                >
-                  <Link
-                    to={link.href}
-                    className="text-primary-foreground/70 hover:text-secondary transition-colors flex items-center gap-2 group"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-secondary/50 group-hover:bg-secondary transition-colors" />
-                    {link.label}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
+  {/* Brand Section */}
+  <div className="lg:col-span-1">
+    <img
+      src="/dps.jpg"
+      alt="Delhi Public School Logo"
+      className="w-52 h-auto object-contain mb-4"
+    />
+    <p className="text-primary-foreground/70 text-sm leading-relaxed">
+      Nurturing future leaders through academic excellence, holistic development,
+      and a commitment to values that inspire lifelong learning.
+    </p>
+  </div>
 
-          {/* Resources */}
-          <div>
-            <h4 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
-              <Award className="w-5 h-5 text-secondary" />
-              Resources
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link, index) => (
-                <motion.li
-                  key={link.label}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                >
-                  <Link
-                    to={link.href}
-                    className="text-primary-foreground/70 hover:text-secondary transition-colors flex items-center gap-2 group"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-secondary/50 group-hover:bg-secondary transition-colors" />
-                    {link.label}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
+  {/* Quick Links */}
+  <div>
+    <h4 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
+      <Globe className="w-5 h-5 text-secondary" />
+      Quick Links
+    </h4>
+    <ul className="space-y-3">
+      {footerLinks.quickLinks.map((link, index) => (
+        <motion.li
+          key={link.label}
+          initial={{ opacity: 0, x: -10 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.05 }}
+        >
+          <Link
+            to={link.href}
+            className="text-primary-foreground/70 hover:text-secondary transition-colors flex items-center gap-2 group"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-secondary/50 group-hover:bg-secondary transition-colors" />
+            {link.label}
+          </Link>
+        </motion.li>
+      ))}
+    </ul>
+  </div>
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
-              <Phone className="w-5 h-5 text-secondary" />
-              Contact Us
-            </h4>
-            <ul className="space-y-4">
-              <motion.li
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
-                <a
-                  href={`tel:${contactInfo.phone}`}
-                  className="flex items-start gap-3 text-primary-foreground/70 hover:text-secondary transition-colors group"
-                >
-                  <Phone className="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary/70 group-hover:text-secondary" />
-                  <span>{contactInfo.phone}</span>
-                </a>
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-              >
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="flex items-start gap-3 text-primary-foreground/70 hover:text-secondary transition-colors group"
-                >
-                  <Mail className="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary/70 group-hover:text-secondary" />
-                  <span>{contactInfo.email}</span>
-                </a>
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="flex items-start gap-3 text-primary-foreground/70"
-              >
-                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary/70" />
-                <span>{contactInfo.address}</span>
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="flex items-start gap-3 text-primary-foreground/70"
-              >
-                <Clock className="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary/70" />
-                <span>{contactInfo.hours}</span>
-              </motion.li>
-            </ul>
-          </div>
-        </div>
+  {/* Resources */}
+  <div>
+    <h4 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
+      <Award className="w-5 h-5 text-secondary" />
+      Resources
+    </h4>
+    <ul className="space-y-3">
+      {footerLinks.resources.map((link, index) => (
+        <motion.li
+          key={link.label}
+          initial={{ opacity: 0, x: -10 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.05 }}
+        >
+          <Link
+            to={link.href}
+            className="text-primary-foreground/70 hover:text-secondary transition-colors flex items-center gap-2 group"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-secondary/50 group-hover:bg-secondary transition-colors" />
+            {link.label}
+          </Link>
+        </motion.li>
+      ))}
+    </ul>
+  </div>
+
+  {/* Contact Info */}
+  <div>
+    <h4 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
+      <Phone className="w-5 h-5 text-secondary" />
+      Contact Us
+    </h4>
+    <ul className="space-y-4">
+      <motion.li
+        initial={{ opacity: 0, x: -10 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+      >
+        <a
+          href={`tel:${contactInfo.phone}`}
+          className="flex items-start gap-3 text-primary-foreground/70 hover:text-secondary transition-colors group"
+        >
+          <Phone className="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary/70 group-hover:text-secondary" />
+          <span>{contactInfo.phone}</span>
+        </a>
+      </motion.li>
+
+      <motion.li
+        initial={{ opacity: 0, x: -10 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1 }}
+      >
+        <a
+          href={`mailto:${contactInfo.email}`}
+          className="flex items-start gap-3 text-primary-foreground/70 hover:text-secondary transition-colors group"
+        >
+          <Mail className="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary/70 group-hover:text-secondary" />
+          <span>{contactInfo.email}</span>
+        </a>
+      </motion.li>
+
+      <motion.li
+        initial={{ opacity: 0, x: -10 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        className="flex items-start gap-3 text-primary-foreground/70"
+      >
+        <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary/70" />
+        <span>{contactInfo.address}</span>
+      </motion.li>
+
+      <motion.li
+        initial={{ opacity: 0, x: -10 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+        className="flex items-start gap-3 text-primary-foreground/70"
+      >
+        <Clock className="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary/70" />
+        <span>{contactInfo.hours}</span>
+      </motion.li>
+    </ul>
+  </div>
+
+</div>
+
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/60 text-sm text-center md:text-left flex items-center gap-2">
-              © {new Date().getFullYear()} Delhi Public School Hyderabad. Made with 
+              © {new Date().getFullYear()} Delhi Public School Hyderabad. 
+              {/* Made with 
               <Heart className="w-4 h-4 text-red-400 fill-red-400" /> 
-              for Education
+              for Education */}
             </p>
             <div className="flex items-center gap-6">
               {footerLinks.legal.map((link) => (
