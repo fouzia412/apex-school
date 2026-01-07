@@ -19,7 +19,7 @@ export const CTASection = () => {
             {/* Content */}
             <div data-aos="fade-right">
               <h2 className="display-2 text-primary-foreground mb-6">
-                Ready to Join Our <span className="text-secondary">DPS Family?</span>
+                Ready to Join Our <span className="text-secondary">APEX Family?</span>
               </h2>
               <p className="body-lg text-primary-foreground/90 mb-8">
                 Give your child the gift of excellence. Admissions for the 2026-27 academic year are now open. Take the first step towards their bright future.

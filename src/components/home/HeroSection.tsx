@@ -88,7 +88,7 @@ export const HeroSection = () => {
   const currentSlideData = slides[currentSlide];
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
+    <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-24">
       {/* Background Image Slider */}
       <AnimatePresence initial={false}>
         <motion.div
@@ -180,7 +180,7 @@ export const HeroSection = () => {
               </Link>
             </Button>
             <Button variant="glass" size="xl" asChild>
-              <Link to="/infrastructure-our-campus">
+              <Link to="/infrastructure/our-campus">
                 <Play className="w-5 h-5 mr-2" />
                 Explore Campus
               </Link>

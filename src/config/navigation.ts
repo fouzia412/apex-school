@@ -53,6 +53,17 @@ export const navigationConfig: NavItem[] = [
     ],
   },
   {
+    label: "Infrastructure",
+    href: "#",
+    icon: "Building2",
+    children: [
+      { label: "Our Campus", href: "/infrastructure/our-campus" },
+      { label: "Innovation Labs", href: "/infrastructure/innovation-labs" },
+      { label: "Sports Facilities", href: "/infrastructure/sports-facilities" },
+      { label: "Library", href: "/infrastructure/library" },
+    ],
+  },
+  {
     label: "Contact Us",
     href: "/contact-us",
     icon: "MapPin",
