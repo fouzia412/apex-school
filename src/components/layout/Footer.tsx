@@ -61,7 +61,7 @@ export const Footer = () => {
       </div>
 
       {/* Wave Separator */}
-      <div className="absolute -top-1 left-0 w-full overflow-hidden leading-none rotate-180">
+      {/* <div className="absolute -top-1 left-0 w-full overflow-hidden leading-none rotate-180">
         <svg
           className="relative block w-full h-20 md:h-24"
           viewBox="0 0 1200 120"
@@ -72,7 +72,7 @@ export const Footer = () => {
             fill="hsl(var(--background))"
           />
         </svg>
-      </div>
+      </div> */}
 
       {/* Newsletter Section */}
       <div className="container mx-auto px-4 pt-32 pb-12">
@@ -266,9 +266,10 @@ export const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/60 text-sm text-center md:text-left flex items-center gap-2">
-              © {new Date().getFullYear()} APEX - The School of Excellence. Made with 
+              © {new Date().getFullYear()} APEX - The School of Excellence.
+               {/* Made with 
               <Heart className="w-4 h-4 text-primary fill-primary" /> 
-              for Education
+              for Education */}
             </p>
             <div className="flex items-center gap-6">
               {footerLinks.legal.map((link) => (
