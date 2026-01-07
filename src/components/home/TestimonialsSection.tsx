@@ -7,7 +7,8 @@ const testimonials = [
     id: 1,
     name: 'Priya Sharma',
     role: 'Parent of Class X Student',
-    quote: "DPS Hyderabad has been instrumental in shaping my daughter's personality. The teachers are dedicated, the facilities are world-class, and the holistic approach to education is commendable.",
+    quote:
+      "APEX – The School of Excellence has been instrumental in shaping my daughter's personality. The teachers are dedicated, the facilities are world-class, and the holistic approach to education is truly commendable.",
     rating: 5,
     avatar: 'PS',
   },
@@ -15,7 +16,8 @@ const testimonials = [
     id: 2,
     name: 'Arjun Reddy',
     role: 'Alumni, Batch of 2023',
-    quote: "The years I spent at DPS Hyderabad were truly transformative. The school not only prepared me academically but also instilled values that guide me today at IIT Delhi.",
+    quote:
+      "The years I spent at APEX – The School of Excellence were truly transformative. The school not only prepared me academically but also instilled values that guide me today at IIT Delhi.",
     rating: 5,
     avatar: 'AR',
   },
@@ -23,7 +25,8 @@ const testimonials = [
     id: 3,
     name: 'Dr. Meera Krishnan',
     role: 'Parent of Two Students',
-    quote: "Both my children study here, and I've seen remarkable growth in their confidence and knowledge. The school's emphasis on both academics and extracurriculars is perfectly balanced.",
+    quote:
+      "Both my children study at APEX – The School of Excellence, and I've seen remarkable growth in their confidence and knowledge. The school’s emphasis on academics and extracurriculars is perfectly balanced.",
     rating: 5,
     avatar: 'MK',
   },
@@ -42,18 +45,22 @@ export const TestimonialsSection = () => {
 
   return (
     <section className="section-padding bg-gradient-primary relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-        }} />
+      {/* Background Pattern (must not capture clicks) */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="eyebrow text-secondary mb-3 block" data-aos="fade-up">Testimonials</span>
-          <h2 className="heading-1 text-primary-foreground mb-4" data-aos="fade-up" data-aos-delay="100">
+          <span className="eyebrow text-secondary mb-3 block">Testimonials</span>
+          <h2 className="heading-1 text-primary-foreground mb-4">
             What Our <span className="text-secondary">Community</span> Says
           </h2>
         </div>
@@ -74,7 +81,7 @@ export const TestimonialsSection = () => {
 
               {/* Quote Text */}
               <blockquote className="quote text-primary-foreground text-xl md:text-2xl mb-8 leading-relaxed">
-                "{testimonials[currentIndex].quote}"
+                “{testimonials[currentIndex].quote}”
               </blockquote>
 
               {/* Author */}
@@ -86,7 +93,9 @@ export const TestimonialsSection = () => {
                   <h4 className="font-heading font-semibold text-primary-foreground text-lg">
                     {testimonials[currentIndex].name}
                   </h4>
-                  <p className="text-primary-foreground/70 text-sm">{testimonials[currentIndex].role}</p>
+                  <p className="text-primary-foreground/70 text-sm">
+                    {testimonials[currentIndex].role}
+                  </p>
                 </div>
                 <div className="ml-auto flex gap-1">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
@@ -106,6 +115,7 @@ export const TestimonialsSection = () => {
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
+
             <div className="flex items-center gap-2">
               {testimonials.map((_, index) => (
                 <button
@@ -120,6 +130,7 @@ export const TestimonialsSection = () => {
                 />
               ))}
             </div>
+
             <button
               onClick={nextTestimonial}
               className="w-12 h-12 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center text-primary-foreground hover:bg-primary-foreground/20 transition-colors"

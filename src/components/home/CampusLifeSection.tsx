@@ -9,7 +9,8 @@ import libraryImage from '@/assets/library.jpg';
 const campusAreas = [
   {
     title: 'Innovation Labs',
-    description: 'State-of-the-art science and technology labs fostering innovation and practical learning.',
+    description:
+      'State-of-the-art science and technology labs fostering innovation and practical learning.',
     image: labImage,
     icon: Microscope,
     link: '/infrastructure/innovation-labs',
@@ -17,7 +18,8 @@ const campusAreas = [
   },
   {
     title: 'Sports Excellence',
-    description: 'World-class sports facilities for developing athletic skills and team spirit.',
+    description:
+      'World-class sports facilities for developing athletic skills and team spirit.',
     image: sportsImage,
     icon: Trophy,
     link: '/infrastructure/sports-facilities',
@@ -25,7 +27,8 @@ const campusAreas = [
   },
   {
     title: 'Knowledge Hub',
-    description: 'Modern library with vast resources to inspire curiosity and lifelong learning.',
+    description:
+      'Modern library with vast resources to inspire curiosity and lifelong learning.',
     image: libraryImage,
     icon: BookOpen,
     link: '/infrastructure/library',
@@ -36,19 +39,32 @@ const campusAreas = [
 export const CampusLifeSection = () => {
   return (
     <section className="section-padding bg-muted/50 relative overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-secondary/5 blur-3xl" />
+      {/* Background Decoration (never block clicks) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl z-0"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-0 w-96 h-96 rounded-full bg-secondary/5 blur-3xl z-0"
+      />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="eyebrow mb-3 block" data-aos="fade-up">Explore Our Campus</span>
+          <span className="eyebrow mb-3 block" data-aos="fade-up">
+            Explore Our Campus
+          </span>
           <h2 className="heading-1 mb-4" data-aos="fade-up" data-aos-delay="100">
             Where Learning Comes <span className="text-gradient">Alive</span>
           </h2>
-          <p className="body-lg text-muted-foreground" data-aos="fade-up" data-aos-delay="200">
-            Our sprawling 15-acre campus is designed to nurture every aspect of a student's growth with world-class facilities.
+          <p
+            className="body-lg text-muted-foreground"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Our sprawling 15-acre campus is designed to nurture every aspect of
+            a student's growth with world-class facilities.
           </p>
         </div>
 
@@ -66,20 +82,28 @@ export const CampusLifeSection = () => {
               <img
                 src={area.image}
                 alt={area.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0"
               />
-              
-              {/* Gradient Overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-t ${area.color} opacity-80`} />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
+
+              {/* Gradient Overlay (must not capture clicks) */}
+              <div
+                aria-hidden="true"
+                className={`pointer-events-none absolute inset-0 z-0 bg-gradient-to-t ${area.color} opacity-80`}
+              />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent"
+              />
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-primary-foreground">
+              <div className="absolute inset-0 z-10 flex flex-col justify-end p-6 text-primary-foreground">
                 <div className="w-14 h-14 rounded-2xl bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <area.icon className="w-7 h-7" />
                 </div>
                 <h3 className="heading-3 mb-2">{area.title}</h3>
-                <p className="body-sm text-primary-foreground/90 mb-4">{area.description}</p>
+                <p className="body-sm text-primary-foreground/90 mb-4">
+                  {area.description}
+                </p>
                 <Link
                   to={area.link}
                   className="inline-flex items-center text-sm font-semibold text-secondary hover:gap-3 transition-all"

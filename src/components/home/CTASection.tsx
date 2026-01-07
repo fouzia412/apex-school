@@ -9,8 +9,11 @@ export const CTASection = () => {
     <section className="section-padding relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="relative rounded-3xl overflow-hidden bg-gradient-hero p-8 md:p-16">
-          {/* Background Elements */}
-          <div className="absolute inset-0 opacity-10">
+          {/* Background Elements (must not capture clicks) */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 z-0 opacity-10"
+          >
             <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-secondary blur-3xl" />
             <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-dps-teal blur-3xl" />
           </div>
@@ -19,10 +22,13 @@ export const CTASection = () => {
             {/* Content */}
             <div data-aos="fade-right">
               <h2 className="display-2 text-primary-foreground mb-6">
-                Ready to Join Our <span className="text-secondary">APEX Family?</span>
+                Ready to Join Our{' '}
+                <span className="text-secondary">APEX Family?</span>
               </h2>
               <p className="body-lg text-primary-foreground/90 mb-8">
-                Give your child the gift of excellence. Admissions for the 2026-27 academic year are now open. Take the first step towards their bright future.
+                Give your child the gift of excellence. Admissions for the
+                2026-27 academic year are now open. Take the first step towards
+                their bright future.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button variant="gold" size="xl" asChild>
@@ -40,8 +46,18 @@ export const CTASection = () => {
             {/* Contact Cards */}
             <div className="grid sm:grid-cols-2 gap-4" data-aos="fade-left">
               {[
-                { icon: Phone, label: 'Call Us', value: contactInfo.phone, href: `tel:${contactInfo.phone}` },
-                { icon: Mail, label: 'Email Us', value: contactInfo.email, href: `mailto:${contactInfo.email}` },
+                {
+                  icon: Phone,
+                  label: 'Call Us',
+                  value: contactInfo.phone,
+                  href: `tel:${contactInfo.phone}`,
+                },
+                {
+                  icon: Mail,
+                  label: 'Email Us',
+                  value: contactInfo.email,
+                  href: `mailto:${contactInfo.email}`,
+                },
               ].map((item) => (
                 <motion.a
                   key={item.label}
@@ -53,8 +69,12 @@ export const CTASection = () => {
                   <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center mb-4 group-hover:bg-secondary/30 transition-colors">
                     <item.icon className="w-6 h-6 text-secondary" />
                   </div>
-                  <p className="text-sm text-primary-foreground/70 mb-1">{item.label}</p>
-                  <p className="font-heading font-semibold text-primary-foreground">{item.value}</p>
+                  <p className="text-sm text-primary-foreground/70 mb-1">
+                    {item.label}
+                  </p>
+                  <p className="font-heading font-semibold text-primary-foreground">
+                    {item.value}
+                  </p>
                 </motion.a>
               ))}
               <motion.div
@@ -66,9 +86,15 @@ export const CTASection = () => {
                     <MapPin className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <p className="text-sm text-primary-foreground/70 mb-1">Visit Us</p>
-                    <p className="font-heading font-semibold text-primary-foreground">{contactInfo.address}</p>
-                    <p className="text-sm text-primary-foreground/70 mt-2">{contactInfo.hours}</p>
+                    <p className="text-sm text-primary-foreground/70 mb-1">
+                      Visit Us
+                    </p>
+                    <p className="font-heading font-semibold text-primary-foreground">
+                      {contactInfo.address}
+                    </p>
+                    <p className="text-sm text-primary-foreground/70 mt-2">
+                      {contactInfo.hours}
+                    </p>
                   </div>
                 </div>
               </motion.div>

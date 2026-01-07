@@ -19,43 +19,43 @@
     --apex-blue-dark: 210 95% 30%;
     --apex-black: 0 0% 8%;
     --apex-black-light: 0 0% 15%;
-    
+
     /* Base Theme */
     --background: 0 0% 100%;
     --foreground: 0 0% 8%;
-    
+
     --card: 0 0% 100%;
     --card-foreground: 0 0% 8%;
-    
+
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 8%;
-    
+
     --primary: 0 85% 50%;
     --primary-foreground: 0 0% 100%;
-    
+
     --secondary: 43 96% 50%;
     --secondary-foreground: 0 0% 8%;
-    
+
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
-    
+
     --accent: 210 90% 45%;
     --accent-foreground: 0 0% 100%;
-    
+
     --destructive: 0 85% 50%;
     --destructive-foreground: 0 0% 100%;
-    
+
     --border: 0 0% 90%;
     --input: 0 0% 90%;
     --ring: 0 85% 50%;
-    
+
     --radius: 0.75rem;
-    
+
     /* Typography */
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Lato', sans-serif;
     --font-accent: 'Playfair Display', serif;
-    
+
     /* Shadows */
     --shadow-sm: 0 2px 8px -2px hsl(0 0% 8% / 0.08);
     --shadow-md: 0 8px 24px -6px hsl(0 0% 8% / 0.12);
@@ -63,7 +63,7 @@
     --shadow-glow: 0 0 40px hsl(var(--apex-red) / 0.25);
     --shadow-gold: 0 8px 32px hsl(var(--apex-gold) / 0.3);
     --shadow-blue: 0 8px 32px hsl(var(--apex-blue) / 0.3);
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--apex-red)) 0%, hsl(var(--apex-red-dark)) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(var(--apex-gold)) 0%, hsl(var(--apex-gold-light)) 100%);
@@ -71,7 +71,7 @@
     --gradient-hero: linear-gradient(180deg, hsl(var(--apex-black)) 0%, hsl(var(--apex-red-dark)) 50%, hsl(var(--apex-blue-dark)) 100%);
     --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.15) 0%, hsl(0 0% 100% / 0.05) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 12%) 100%);
-    
+
     /* Transitions */
     --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -91,29 +91,29 @@
   .dark {
     --background: 0 0% 5%;
     --foreground: 0 0% 95%;
-    
+
     --card: 0 0% 10%;
     --card-foreground: 0 0% 95%;
-    
+
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 95%;
-    
+
     --primary: 0 80% 55%;
     --primary-foreground: 0 0% 100%;
-    
+
     --secondary: 43 96% 50%;
     --secondary-foreground: 0 0% 8%;
-    
+
     --muted: 0 0% 18%;
     --muted-foreground: 0 0% 60%;
-    
+
     --accent: 210 80% 55%;
     --accent-foreground: 0 0% 100%;
-    
+
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 0 80% 55%;
-    
+
     --sidebar-background: 0 0% 8%;
     --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 0 80% 55%;
@@ -146,7 +146,7 @@
   .display-1 {
     @apply text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight;
   }
-  
+
   .display-2 {
     @apply text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight;
   }
@@ -297,14 +297,7 @@
     @apply opacity-100 visible translate-y-0;
   }
 
-  /* Scroll Animation Triggers */
-  [data-aos] {
-    pointer-events: none;
-  }
-
-  [data-aos].aos-animate {
-    pointer-events: auto;
-  }
+  /* NOTE: Removed the pointer-events lock on [data-aos] because it breaks clicks. */
 }
 
 @layer utilities {

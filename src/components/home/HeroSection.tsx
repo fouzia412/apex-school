@@ -188,7 +188,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Quick Stats */}
-          <motion.div
+          {/* <motion.div
             className="hero-text-animate grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-8 border-t border-primary-foreground/20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -208,7 +208,7 @@ export const HeroSection = () => {
                 <div className="text-sm text-primary-foreground/70">{stat.label}</div>
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
 
@@ -229,7 +229,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
+      {/* <motion.div
         className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
@@ -242,7 +242,7 @@ export const HeroSection = () => {
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           />
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
