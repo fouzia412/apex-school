@@ -88,7 +88,7 @@ export const HeroSection = () => {
   const currentSlideData = slides[currentSlide];
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-24">
+    <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-1 md:pt-1">
       {/* Background Image Slider */}
       <AnimatePresence initial={false}>
         <motion.div

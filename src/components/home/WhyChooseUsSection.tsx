@@ -64,7 +64,7 @@ export const WhyChooseUsSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-b from-muted/30 to-background">
+    <section className=" bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">

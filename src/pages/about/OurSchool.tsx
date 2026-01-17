@@ -18,23 +18,31 @@ const OurSchool = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="display-3 text-foreground mb-6">
-                Welcome to <span className="text-primary">DPS Hyderabad</span>
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Delhi Public School Hyderabad was established in 2002 under the aegis of the Delhi Public School Society, New Delhi. The school is affiliated to the Central Board of Secondary Education (CBSE), New Delhi.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Spread over 15 acres of lush green campus, DPS Hyderabad provides world-class infrastructure and facilities that foster holistic development of students. Our commitment to excellence in academics, sports, and co-curricular activities has made us one of the premier educational institutions in Telangana.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                With a team of dedicated educators and state-of-the-art facilities, we nurture young minds to become responsible global citizens who are equipped to face the challenges of the 21st century.
-              </p>
-            </motion.div>
+  initial={{ opacity: 0, x: -30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+>
+  <h2 className="text-3xl font-bold text-foreground mb-4">
+    Welcome to <span className="text-primary">Apex The School</span>, Hyderabad
+  </h2>
+
+  <p className="text-primary font-medium italic mb-6">
+    “Knowledge brings certainty, certainty brings a bright outlook, and a bright outlook brings harmony.”
+  </p>
+
+  <p className="text-muted-foreground leading-relaxed mb-4">
+    Welcome to our vibrant learning community. At Apex The School, we believe that education is not merely the acquisition of facts, but the training of the mind to think, the heart to feel, and the spirit to lead.
+  </p>
+
+  <p className="text-muted-foreground leading-relaxed mb-4">
+    Located in the heart of Hyderabad, we provide a nurturing environment where curiosity is celebrated and every child is encouraged to reach their personal <span className="font-medium text-foreground">“Apex.”</span>
+  </p>
+
+  <p className="text-muted-foreground leading-relaxed">
+    Our journey began as a humble seed — a vision to provide quality education rooted in values. Today, that seed has grown into a flourishing sanctuary of learning. We don’t just teach; we sow the seeds of character, resilience, and wisdom, shaping confident learners ready for the future.
+  </p>
+</motion.div>
+
             <motion.div
               className="relative"
               initial={{ opacity: 0, x: 30 }}

@@ -154,11 +154,11 @@ export const Header = () => {
             </nav>
 
             {/* CTA Button */}
-            <div className="hidden lg:flex items-center gap-3">
+            {/* <div className="hidden lg:flex items-center gap-3">
               <Button variant="gold" size="lg" asChild>
                 <Link to="/admission-process">Apply Now</Link>
               </Button>
-            </div>
+            </div> */}
 
             {/* Mobile Menu Toggle */}
             <button
@@ -209,11 +209,11 @@ export const Header = () => {
                   ))}
                 </nav>
 
-                <div className="mt-8 pt-8 border-t border-border">
+                {/* <div className="mt-8 pt-8 border-t border-border">
                   <Button variant="gold" size="lg" className="w-full" asChild>
                     <Link to="/admission-process">Apply Now</Link>
                   </Button>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </motion.div>

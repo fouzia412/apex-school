@@ -40,6 +40,11 @@ export const navigationConfig: NavItem[] = [
     label: "Admissions",
     href: "/admission-process",
     icon: "UserPlus",
+     children: [
+      { label: "Admission Process", href: "/admission-process" },
+      { label: "Fee Structure", href: "/fee-structure" },
+      { label: "FAQ", href: "/faq" },
+    ],
   },
   {
     label: "Media",

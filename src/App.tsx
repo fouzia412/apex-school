@@ -10,6 +10,8 @@ import { lazy, Suspense } from "react";
 // Pages
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import FeeStructure from "./pages/admissions/FeeStructure";
+import FaqPage from "./pages/admissions/FaqPage";
 
 // Lazy loaded pages - About
 const OurSchool = lazy(() => import("./pages/about/OurSchool"));
@@ -88,6 +90,8 @@ const App = () => (
 
               {/* Admissions */}
               <Route path="/admission-process" element={<AdmissionProcess />} />
+              <Route path="/fee-structure" element={<FeeStructure />} />
+              <Route path="/faq" element={<FaqPage />} />
 
               {/* Media */}
               <Route path="/gallery" element={<Gallery />} />

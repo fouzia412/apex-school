@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import { ArrowRight, Award, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
+import { ArrowRight, Award, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 export const WelcomeSection = () => {
   useEffect(() => {
     AOS.init({
       duration: 900,
-      easing: 'ease-out-cubic',
+      easing: "ease-out-cubic",
       once: true,
       offset: 120,
     });
@@ -32,9 +32,9 @@ export const WelcomeSection = () => {
         <div className="text-center mb-16" data-aos="zoom-in">
           <div className="inline-block bg-gradient-to-r from-primary/10 via-secondary/20 to-primary/10 px-8 py-6 rounded-2xl border border-secondary/20 shadow-elegant">
             <blockquote className="text-lg md:text-xl lg:text-2xl font-heading italic text-foreground/80">
-              "Knowledge brings certainty, certainty brings a bright outlook,
+              “Knowledge brings certainty, certainty brings a bright outlook,
               <br className="hidden md:block" />
-              and a bright outlook brings harmony."
+              and a bright outlook brings harmony.”
             </blockquote>
           </div>
         </div>
@@ -47,37 +47,44 @@ export const WelcomeSection = () => {
               data-aos="fade-right"
             >
               <Award className="w-4 h-4" />
-              Welcome to Our Vibrant Learning Community
+              Welcome to our vibrant learning community
             </div>
 
             <h2
-              className="text-4xl md:text-5xl font-heading font-bold mb-4"
+              className="text-4xl md:text-5xl font-heading font-bold mb-6"
               data-aos="fade-right"
             >
-              Welcome to <span className="text-gradient-gold">Apex The School</span>
+              Welcome to{" "}
+              <span className="text-gradient-gold">
+                Apex The School, Hyderabad
+              </span>
             </h2>
-
-            <div
-              className="text-2xl md:text-3xl font-heading font-bold text-primary mb-6"
-              data-aos="fade-right"
-              data-aos-delay="100"
-            >
-              Hyderabad
-            </div>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p data-aos="fade-up">
-                At Apex The School, we believe that education is not merely the acquisition of facts, but the training of the mind to think, the heart to feel, and the spirit to lead. Located in the heart of Hyderabad, we provide a nurturing environment where curiosity is celebrated and every child is encouraged to reach their personal "Apex".
+                Welcome to our vibrant learning community. At Apex The School,
+                we believe that education is not merely the acquisition of
+                facts, but the training of the mind to think, the heart to feel,
+                and the spirit to lead. Located in the heart of Hyderabad, we
+                provide a nurturing environment where curiosity is celebrated
+                and every child is encouraged to reach their personal "Apex".
               </p>
+
               <p data-aos="fade-up" data-aos-delay="100">
-                Our journey began as a humble seed—a vision to provide quality education rooted in values. Today, that seed has grown into a flourishing sanctuary of learning, marking the start of a promising journey for every student who walks through our gates.
+                Our journey began as a humble seed—a vision to provide quality
+                education rooted in values. Today, that seed has grown into a
+                flourishing sanctuary of learning, marking the start of a
+                promising journey for every student who walks through our
+                gates.
               </p>
+
               <p
                 className="font-medium text-foreground"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                We don't just teach; we sow the seeds of character, resilience, and wisdom.
+                We don't just teach; we sow the seeds of character, resilience,
+                and wisdom.
               </p>
             </div>
 
@@ -98,10 +105,10 @@ export const WelcomeSection = () => {
           {/* RIGHT STATS */}
           <div className="grid grid-cols-2 gap-6 w-full">
             {[
-              { value: '🎯', label: 'The Apex Way', subtitle: 'Ignite, Inspire, Achieve' },
-              { value: '🌟', label: 'Excellence', subtitle: 'Nurturing Minds' },
-              { value: '📚', label: 'Holistic Growth', subtitle: 'Character Building' },
-              { value: '🌍', label: 'Global Citizens', subtitle: 'Future Leaders' },
+              { value: "🎯", label: "The Apex Way", subtitle: "Ignite, Inspire, Achieve" },
+              { value: "🌟", label: "Excellence", subtitle: "Nurturing Minds" },
+              { value: "📚", label: "Holistic Growth", subtitle: "Character Building" },
+              { value: "🌍", label: "Global Citizens", subtitle: "Future Leaders" },
             ].map((stat, i) => (
               <div
                 key={stat.label}
