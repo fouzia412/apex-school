@@ -1,8 +1,38 @@
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { PageHero } from '@/components/common/PageHero';
-import { motion } from 'framer-motion';
-import { Target, Eye, Compass, Star } from 'lucide-react';
+import { Target, Eye, Compass, Star, Globe, Lightbulb, Heart, Users, Award, TrendingUp, UserCheck, RefreshCw } from 'lucide-react';
 
 const MissionVision = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50,
+    });
+  }, []);
+
+  const coreValues = [
+    { icon: '🔗', title: 'Synergistic Integration', desc: 'Integrating faith and knowledge for profound understanding and holistic perspective.' },
+    { icon: '🚀', title: 'Transformative Leadership', desc: 'Empowering students to drive positive change, innovation, and progress in communities and the world.' },
+    { icon: '🌱', title: 'Holistic Development', desc: 'Nurturing intellectual, spiritual, and personal growth for students to reach their full potential.' },
+    { icon: '🤝', title: 'Purposeful Engagement', desc: 'Fostering community engagement, service, and social responsibility rooted in enduring values.' },
+    { icon: '💡', title: 'Excellence and Innovation', desc: 'Encouraging excellence, innovation, and creativity for critical thinking and effective problem-solving.' },
+    { icon: '🌍', title: 'Global Citizenship', desc: 'Cultivating global citizenship, responsibility, and stewardship for navigating complexities.' },
+    { icon: '⭐', title: 'Exemplary Character', desc: 'Promoting exemplary character, integrity, and role modelling for positive influence.' },
+    { icon: '📈', title: 'Continuous Growth', desc: 'Fostering continuous learning, growth, and self-improvement for adaptability and resilience.' },
+  ];
+
+  const visionPillars = [
+    { number: '1', title: 'Global Leadership with Local Roots', desc: 'We envision our alumni as ethical pioneers across science, technology, the arts, and governance. Whether helming global enterprises or spearheading community initiatives, they will serve as ambassadors of Hyderabad\'s heritage and the excellence of the Apex spirit.' },
+    { number: '2', title: 'Architects of Innovation', desc: 'In an era of rapid transformation, our graduates will remain at the vanguard of progress. We nurture individuals who do not merely follow trends but engineer sustainable solutions to the world\'s most pressing challenges.' },
+    { number: '3', title: 'Compassionate Global Citizenship', desc: 'Our alumni will stand as pillars of empathy and peace. We define true success by the ability to uplift others, ensuring that the harmony cultivated through an Apex education creates a ripple effect of kindness throughout society.' },
+    { number: '4', title: 'An Enduring Network of Excellence', desc: 'By 2050, the Apex Alumni Network will thrive as a global powerhouse of mentorship. This cycle of success ensures that our seasoned graduates return to nourish the potential of new students, securing a perpetual legacy of growth.' },
+    { number: '5', title: 'A Living Legacy of Values', desc: 'We see our students becoming transformative leaders who carry their faith and moral convictions into every endeavour. Over the next 25 years, they will serve as exemplary role models, inspiring future generations through their integrity and character.' },
+  ];
+
   return (
     <>
       <PageHero
@@ -13,99 +43,100 @@ const MissionVision = () => {
       
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          {/* Motto */}
+          <div className="text-center mb-16" data-aos="fade-up">
+            <div className="inline-block bg-gradient-to-r from-primary/10 via-secondary/20 to-primary/10 px-8 py-6 rounded-2xl border border-secondary/20 shadow-elegant">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-2">Our Motto</h2>
+              <p className="text-xl md:text-2xl font-heading italic text-primary">
+                Ignite, Inspire, Achieve: "The Apex Way"
+              </p>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 mb-20">
             {/* Mission */}
-            <motion.div
+            <div
               className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 md:p-12 rounded-3xl border border-primary/20"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              data-aos="fade-right"
             >
               <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center mb-6">
                 <Target className="w-8 h-8 text-primary-foreground" />
               </div>
-              <h2 className="display-3 text-foreground mb-6">Our Mission</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                To provide quality education that nurtures the intellectual, physical, emotional, and social development of every child, preparing them to be responsible global citizens.
+              <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Our Mission</h2>
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                Providing transformative education integrating faith and knowledge for holistic growth, visionary leadership, and purposeful community engagement.
               </p>
-              <ul className="space-y-3">
-                {[
-                  'Foster academic excellence through innovative teaching methods',
-                  'Develop critical thinking and problem-solving skills',
-                  'Encourage creativity and self-expression',
-                  'Build character through value-based education',
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-muted-foreground">
-                    <Star className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            </div>
 
             {/* Vision */}
-            <motion.div
+            <div
               className="bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 md:p-12 rounded-3xl border border-secondary/20"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              data-aos="fade-left"
             >
               <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center mb-6">
                 <Eye className="w-8 h-8 text-secondary-foreground" />
               </div>
-              <h2 className="display-3 text-foreground mb-6">Our Vision</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                To be a world-class educational institution that inspires students to achieve their full potential and become leaders who contribute positively to society.
+              <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Our Vision</h2>
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                Empowering students to become transformative leaders, global citizens, and role models driving positive change and sustainable development worldwide.
               </p>
-              <ul className="space-y-3">
-                {[
-                  'Create lifelong learners with a global perspective',
-                  'Embrace technology and innovation in education',
-                  'Promote sustainable and responsible citizenship',
-                  'Celebrate diversity and foster inclusivity',
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-muted-foreground">
-                    <Star className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            </div>
           </div>
 
           {/* Core Values */}
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="display-3 text-foreground mb-4">Our Core Values</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              The pillars that guide our educational philosophy and shape the character of our students
-            </p>
-          </motion.div>
+          <div className="mb-20">
+            <div className="text-center mb-12" data-aos="fade-up">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">Our Core Values</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                The pillars that guide our educational philosophy and shape the character of our students
+              </p>
+            </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: '🎯', title: 'Excellence', desc: 'Striving for the best in everything we do' },
-              { icon: '🤝', title: 'Integrity', desc: 'Upholding honesty and ethical standards' },
-              { icon: '💡', title: 'Innovation', desc: 'Embracing new ideas and technologies' },
-              { icon: '❤️', title: 'Compassion', desc: 'Caring for others and giving back' },
-            ].map((value, index) => (
-              <motion.div
-                key={value.title}
-                className="bg-card p-6 rounded-2xl border border-border text-center hover:shadow-elegant transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="font-heading font-semibold text-lg mb-2">{value.title}</h3>
-                <p className="text-muted-foreground text-sm">{value.desc}</p>
-              </motion.div>
-            ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {coreValues.map((value, index) => (
+                <div
+                  key={value.title}
+                  className="bg-card p-6 rounded-2xl border border-border text-center hover:shadow-elegant transition-shadow"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 50}
+                >
+                  <div className="text-4xl mb-4">{value.icon}</div>
+                  <h3 className="font-heading font-semibold text-lg mb-2">{value.title}</h3>
+                  <p className="text-muted-foreground text-sm">{value.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Vision 2050 */}
+          <div className="bg-gradient-to-br from-muted/50 to-background rounded-3xl p-8 md:p-12 border border-border">
+            <div className="text-center mb-12" data-aos="fade-up">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+                Our Vision: The Legacy of <span className="text-primary">2050</span>
+              </h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto">
+                Beyond examinations, we prepare our students for the journey of life. As we look toward the next quarter-century, we envision the "Apex Legacy" manifesting through five strategic pillars:
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {visionPillars.map((pillar, index) => (
+                <div
+                  key={pillar.title}
+                  className="flex gap-6 items-start bg-card p-6 rounded-2xl border border-border"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold flex-shrink-0">
+                    {pillar.number}
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold text-lg text-foreground mb-2">{pillar.title}</h3>
+                    <p className="text-muted-foreground">{pillar.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

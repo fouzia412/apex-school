@@ -1,62 +1,155 @@
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { PageHero } from '@/components/common/PageHero';
-import { motion } from 'framer-motion';
-import { ArrowRight, Calendar, FileText, HelpCircle } from 'lucide-react';
+import { ArrowRight, FileText, CreditCard, Users, CheckCircle, HelpCircle, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const AdmissionProcess = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50,
+    });
+  }, []);
+
   const steps = [
-    { step: 1, title: 'Online Application', desc: 'Fill and submit the online application form with required details' },
-    { step: 2, title: 'Document Submission', desc: 'Upload all necessary documents as per guidelines' },
-    { step: 3, title: 'Interaction/Assessment', desc: 'Attend the scheduled interaction or entrance assessment' },
-    { step: 4, title: 'Result Declaration', desc: 'Check admission status on the portal' },
-    { step: 5, title: 'Fee Payment', desc: 'Complete fee payment to confirm admission' },
+    { 
+      step: 1, 
+      title: 'Registration & Application', 
+      content: [
+        { label: 'Inquiry', desc: 'Visit our campus or fill out the online inquiry form to receive our digital prospectus.' },
+        { label: 'Form Submission', desc: 'Fill in the Admission Application Form with accurate details. You can do this online through our portal or collect a physical copy from the school office.' },
+        { label: 'Documentation', desc: 'Attach clear copies of: Child\'s Birth Certificate, Child Passport Size Photographs (4 no\'s), Aadhaar Cards (Child & Parents), Previous School Report Cards (for Grade 2 and above), Transfer Certificate (TC) from the previous school.' },
+      ]
+    },
+    { 
+      step: 2, 
+      title: 'Registration Fee Payment', 
+      content: [
+        { label: '', desc: 'To process the application, a non-refundable Registration Fee must be paid.' },
+        { label: 'Payment Modes', desc: 'Payments can be made via Cash or our secure online portal (Credit/Debit Card, UPI, Net Banking) or via Cheque/Demand Draft at the school accounts office.' },
+      ]
+    },
+    { 
+      step: 3, 
+      title: 'Interaction & Assessment', 
+      content: [
+        { label: 'Pre-Primary (Nursery – UKG)', desc: 'An informal, friendly interaction with the child and parents to understand the child\'s readiness.' },
+        { label: 'Primary & Secondary (Grade 1 – IX)', desc: 'A proficiency assessment in core subjects (English, Math, and Science) to ensure the student is placed in the appropriate grade level.' },
+      ]
+    },
+    { 
+      step: 4, 
+      title: 'Selection & Results', 
+      content: [
+        { label: '', desc: 'Admissions are granted based on school norms, assessment performance, and seat availability.' },
+        { label: 'Notification', desc: 'The result of the admission process will be communicated to parents via phone call, Email/SMS or can be checked on the student portal within 3–5 working days of the assessment.' },
+      ]
+    },
+    { 
+      step: 5, 
+      title: 'Fee Payment & Admission Confirmation', 
+      content: [
+        { label: 'Offer Letter', desc: 'Successful candidates will receive a formal Admission Offer Letter.' },
+        { label: 'Final Step', desc: 'To secure the seat, the Admission Fee and first-term fees must be paid within the stipulated deadline mentioned in the offer letter.' },
+        { label: 'Confirmation', desc: 'Upon receipt of the fee, you will receive a confirmation kit, including the student ID, book list, and uniform details.' },
+      ]
+    },
   ];
 
   return (
     <>
       <PageHero
         title="Admission Process"
-        subtitle="Join the DPS Hyderabad family"
+        subtitle="Your Journey to APEX"
         breadcrumbs={[{ label: 'Admissions', href: '#' }, { label: 'Admission Process' }]}
       />
       
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="display-3 text-foreground mb-4">Admissions Open 2026-27</h2>
-              <p className="text-muted-foreground">Follow these simple steps to apply for admission</p>
+            {/* Intro */}
+            <div className="text-center mb-16" data-aos="fade-up">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+                Admissions Open 2026-27
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Joining the APEX family is a simple and transparent process. We follow a structured approach to ensure every student is placed in an environment where they can thrive.
+              </p>
             </div>
 
-            <div className="space-y-6 mb-12">
+            {/* Steps */}
+            <div className="space-y-8 mb-12">
               {steps.map((item, index) => (
-                <motion.div
+                <div
                   key={item.step}
-                  className="flex gap-6 items-start"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  className="relative"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
                 >
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold flex-shrink-0">
-                    {item.step}
+                  {/* Connector Line */}
+                  {index < steps.length - 1 && (
+                    <div className="absolute left-6 top-16 w-0.5 h-full bg-border -z-10" />
+                  )}
+                  
+                  <div className="flex gap-6 items-start">
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold flex-shrink-0 shadow-lg">
+                      {item.step}
+                    </div>
+                    <div className="flex-1 bg-card p-6 md:p-8 rounded-2xl border border-border hover:shadow-elegant transition-shadow">
+                      <h3 className="font-heading font-bold text-xl md:text-2xl text-foreground mb-4">
+                        Step {item.step}: {item.title}
+                      </h3>
+                      <div className="space-y-3">
+                        {item.content.map((point, idx) => (
+                          <div key={idx} className="flex items-start gap-3">
+                            <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                            <p className="text-muted-foreground">
+                              {point.label && <span className="font-semibold text-foreground">{point.label}: </span>}
+                              {point.desc}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex-1 bg-card p-6 rounded-2xl border border-border">
-                    <h3 className="font-heading font-semibold text-lg mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.desc}</p>
-                  </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-4 justify-center">
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 justify-center mb-12" data-aos="fade-up">
               <Button variant="gold" size="lg">
                 Apply Online <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/faq"><HelpCircle className="w-4 h-4 mr-2" /> FAQs</Link>
+                <Link to="/contact"><Phone className="w-4 h-4 mr-2" /> Contact Admissions</Link>
               </Button>
+            </div>
+
+            {/* Contact Info */}
+            <div 
+              className="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 rounded-3xl border border-border text-center"
+              data-aos="fade-up"
+            >
+              <h3 className="text-xl font-heading font-bold text-foreground mb-4">Need Help?</h3>
+              <p className="text-muted-foreground mb-6">
+                Our admissions team is here to assist you with any questions about the admission process.
+              </p>
+              <div className="flex flex-wrap justify-center gap-6">
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Phone className="w-5 h-5 text-primary" />
+                  <span>+91-XXXXX-XXXXX</span>
+                </div>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <span>admissions@apexschool.edu</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

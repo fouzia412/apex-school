@@ -22,7 +22,6 @@ export const WelcomeSection = () => {
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-
         <div className="absolute top-1/3 right-1/4 animate-spin-slow">
           <Sparkles className="w-8 h-8 text-secondary/20" />
         </div>
@@ -33,9 +32,9 @@ export const WelcomeSection = () => {
         <div className="text-center mb-16" data-aos="zoom-in">
           <div className="inline-block bg-gradient-to-r from-primary/10 via-secondary/20 to-primary/10 px-8 py-6 rounded-2xl border border-secondary/20 shadow-elegant">
             <blockquote className="text-lg md:text-xl lg:text-2xl font-heading italic text-foreground/80">
-              “Education breeds Confidence, Confidence breeds Hope,
+              "Knowledge brings certainty, certainty brings a bright outlook,
               <br className="hidden md:block" />
-              And Hope breeds Peace”
+              and a bright outlook brings harmony."
             </blockquote>
           </div>
         </div>
@@ -48,52 +47,44 @@ export const WelcomeSection = () => {
               data-aos="fade-right"
             >
               <Award className="w-4 h-4" />
-              Celebrating 23 Years of Excellence
+              Welcome to Our Vibrant Learning Community
             </div>
 
             <h2
               className="text-4xl md:text-5xl font-heading font-bold mb-4"
               data-aos="fade-right"
             >
-              Welcome to <span className="text-gradient-gold">APEX</span>
+              Welcome to <span className="text-gradient-gold">Apex The School</span>
             </h2>
 
             <div
-              className="text-3xl md:text-4xl font-heading font-bold text-red-600 mb-6"
+              className="text-2xl md:text-3xl font-heading font-bold text-primary mb-6"
               data-aos="fade-right"
               data-aos-delay="100"
             >
-              The School of Excellence
+              Hyderabad
             </div>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p data-aos="fade-up">
-                APEX – The School of Excellence stands as a beacon of quality
-                education, nurturing young minds to become future leaders.
+                At Apex The School, we believe that education is not merely the acquisition of facts, but the training of the mind to think, the heart to feel, and the spirit to lead. Located in the heart of Hyderabad, we provide a nurturing environment where curiosity is celebrated and every child is encouraged to reach their personal "Apex".
               </p>
               <p data-aos="fade-up" data-aos-delay="100">
-                With state-of-the-art infrastructure, dedicated faculty, and a
-                future-ready curriculum, we empower students to achieve their
-                fullest potential.
-              </p>
-              <p data-aos="fade-up" data-aos-delay="200">
-                Our alumni shine across India and globally — a true testament to
-                academic excellence and character building.
+                Our journey began as a humble seed—a vision to provide quality education rooted in values. Today, that seed has grown into a flourishing sanctuary of learning, marking the start of a promising journey for every student who walks through our gates.
               </p>
               <p
                 className="font-medium text-foreground"
                 data-aos="fade-up"
-                data-aos-delay="300"
+                data-aos-delay="200"
               >
-                At APEX, we don’t just educate — we inspire leaders.
+                We don't just teach; we sow the seeds of character, resilience, and wisdom.
               </p>
             </div>
 
-            {/* ✅ FIXED BUTTON */}
             <div
               className="mt-8 relative z-20"
               data-aos="fade-up"
-              data-aos-delay="400"
+              data-aos-delay="300"
             >
               <Button variant="gold" size="lg" asChild>
                 <Link to="/our-school">
@@ -107,10 +98,10 @@ export const WelcomeSection = () => {
           {/* RIGHT STATS */}
           <div className="grid grid-cols-2 gap-6 w-full">
             {[
-              { value: '2002', label: 'Established', icon: '🏫' },
-              { value: '23+', label: 'Years of Excellence', icon: '⭐' },
-              { value: '5000+', label: 'Students', icon: '🎓' },
-              { value: '100%', label: 'Board Results', icon: '📊' },
+              { value: '🎯', label: 'The Apex Way', subtitle: 'Ignite, Inspire, Achieve' },
+              { value: '🌟', label: 'Excellence', subtitle: 'Nurturing Minds' },
+              { value: '📚', label: 'Holistic Growth', subtitle: 'Character Building' },
+              { value: '🌍', label: 'Global Citizens', subtitle: 'Future Leaders' },
             ].map((stat, i) => (
               <div
                 key={stat.label}
@@ -118,12 +109,12 @@ export const WelcomeSection = () => {
                 data-aos="zoom-in"
                 data-aos-delay={i * 100}
               >
-                <div className="text-4xl mb-3">{stat.icon}</div>
-                <div className="text-3xl md:text-4xl font-heading font-bold text-primary">
-                  {stat.value}
+                <div className="text-4xl mb-3">{stat.value}</div>
+                <div className="text-lg font-heading font-bold text-primary">
+                  {stat.label}
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  {stat.label}
+                  {stat.subtitle}
                 </div>
               </div>
             ))}
