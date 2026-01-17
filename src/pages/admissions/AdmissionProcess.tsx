@@ -75,7 +75,7 @@ const AdmissionProcess = () => {
             {/* Intro */}
             <div className="text-center mb-16" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-                Admissions Open 2026-27
+                Admission Process: Your Journey to APEX
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Joining the APEX family is a simple and transparent process. We follow a structured approach to ensure every student is placed in an environment where they can thrive.
