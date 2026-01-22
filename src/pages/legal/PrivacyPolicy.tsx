@@ -48,7 +48,7 @@ const sections = [
     title: 'Contact Us',
     content: `If you have any questions about this Privacy Policy, please contact us at:
     Email: privacy@apexschool.in
-    Phone: +91 40 1234 5678
+    Phone: +91 79897 85346
     Address: APEX Campus, Excellence Road, City 500001`,
   },
 ];

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Quote, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import principalImage from '@/assets/principal.jpg';
+import principalImage from '/apex-chairman.png';
 
 export const PrincipalMessageSection = () => {
   return (
@@ -25,16 +25,16 @@ export const PrincipalMessageSection = () => {
             >
               <img
                 src={principalImage}
-                alt="Principal, APEX – The School of Excellence"
-                className="w-full h-auto object-cover aspect-[4/5]"
+                alt="chairman, APEX – The School of Excellence"
+                className="w-full max-h-[520px] object-contain"
               />
               {/* Name Card */}
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-foreground/90 to-transparent">
                 <h3 className="font-heading font-bold text-xl text-primary-foreground">
-                  Dr. Ramesh Kumar
+                  Dr. Khaja Abdul Mutalib
                 </h3>
                 <p className="text-secondary text-sm">
-                  Principal, APEX – The School of Excellence
+                  Chairman, APEX – The School of Excellence
                 </p>
               </div>
             </motion.div>
@@ -52,37 +52,31 @@ export const PrincipalMessageSection = () => {
 
           {/* Content Side */}
           <div data-aos="fade-left">
-            <span className="eyebrow mb-3 block">From the Principal's Desk</span>
+            <span className="eyebrow mb-3 block">From the Chairman’s Desk</span>
             <h2 className="heading-1 mb-6">
-              Empowering Minds, <span className="text-gradient">Shaping Futures</span>
+              A Legacy of Learning.  <span className="text-gradient">A Future of Leadership.</span>
             </h2>
 
             {/* Quote */}
             <div className="relative pl-8 mb-8">
               <Quote className="absolute left-0 top-0 w-6 h-6 text-secondary" />
               <blockquote className="quote text-muted-foreground">
-                “At APEX – The School of Excellence, we believe that every child is
-                unique with infinite potential. Our mission is to create an
-                environment that nurtures curiosity, encourages innovation, and
-                builds strong character.”
+                “Leadership is not about position—it is about purpose, precision, and progress.”
               </blockquote>
             </div>
 
             <p className="body-base text-muted-foreground mb-6">
-              With a commitment to academic excellence and holistic development,
-              we prepare our students not just for examinations, but for life.
-              Our dedicated faculty, modern infrastructure, and diverse programs
-              ensure that every student discovers their passion and achieves
-              their dreams.
+              My life’s work has always been guided by one strong belief — “EDUCATION CHANGES LIVES”. Whether it is supporting children, empowering youth, uplifting women, or building stronger communities,
+               I have seen again and again that the only true and lasting source of development is knowledge.
             </p>
 
-            <p className="body-base text-muted-foreground mb-8">
+            {/* <p className="body-base text-muted-foreground mb-8">
               Welcome to APEX – The School of Excellence, where tradition meets
               innovation, and where your child’s success story begins.
-            </p>
+            </p> */}
 
             <Button variant="green" size="lg" asChild>
-              <Link to="/principal-message">
+              <Link to="/chairman-message">
                 Read Full Message
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>

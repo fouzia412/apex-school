@@ -194,7 +194,7 @@ const FaqPage = () => {
 </AccordionItem>
 
 <AccordionItem title="20. Issues with filling the registration form?" isOpen={openIndex === 19} onClick={() => handleToggle(19)}>
-  The online form can be filled anytime. If issues persist, please email admissions@dpshyderabad.com after reviewing the guidelines on the website.
+  The online form can be filled anytime. If issues persist, please email Info@apextheschool.in after reviewing the guidelines on the website.
 </AccordionItem>
 
 <AccordionItem title="21. Payment issues after submitting the form?" isOpen={openIndex === 20} onClick={() => handleToggle(20)}>
@@ -202,7 +202,7 @@ const FaqPage = () => {
 </AccordionItem>
 
 <AccordionItem title="22. How to communicate during admissions?" isOpen={openIndex === 21} onClick={() => handleToggle(21)}>
-  Please write to <strong>admissions@dpshyderabad.com</strong> mentioning Application Number, Candidate Name, Parent Name and Class Applied For. No queries are entertained in person or via phone.
+  Please write to <strong>Info@apextheschool.in</strong> mentioning Application Number, Candidate Name, Parent Name and Class Applied For. No queries are entertained in person or via phone.
 </AccordionItem>
 
           </div>

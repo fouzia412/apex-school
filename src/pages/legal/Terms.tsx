@@ -50,8 +50,8 @@ const sections = [
   {
     title: 'Contact Information',
     content: `For questions about these Terms and Conditions, please contact us at:
-    Email: info@apexschool.in
-    Phone: +91 40 1234 5678
+    Email: Info@apextheschool.in
+    Phone: +91 79897 85346
     Address: APEX Campus, Excellence Road, City 500001`,
   },
 ];

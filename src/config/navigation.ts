@@ -19,10 +19,10 @@ export const navigationConfig: NavItem[] = [
     children: [
       { label: "Our School", href: "/our-school" },
       { label: "Mission & Vision", href: "/mission-vision" },
-      { label: "Principal's Message", href: "/principal-message" },
+      // { label: "Principal's Message", href: "/principal-message" },
       { label: "Chairman's Message", href: "/chairman-message" },
       { label: "Director's Message", href: "/director-message" },
-      { label: "Management Committee", href: "/management-committee" },
+      // { label: "Management Committee", href: "/management-committee" },
     ],
   },
   {
@@ -32,7 +32,7 @@ export const navigationConfig: NavItem[] = [
     children: [
       { label: "Pre-Primary & Primary", href: "/curriculum/pre-primary" },
       { label: "Middle & Secondary School", href: "/curriculum/middle-secondary" },
-      { label: "Senior Secondary School", href: "/curriculum/senior-secondary" },
+      // { label: "Senior Secondary School", href: "/curriculum/senior-secondary" },
       { label: "Faculty", href: "/faculty" },
     ],
   },
@@ -46,28 +46,28 @@ export const navigationConfig: NavItem[] = [
       { label: "FAQ", href: "/faq" },
     ],
   },
-  {
-    label: "Media",
-    href: "#",
-    icon: "Camera",
-    children: [
-      { label: "Picture Gallery", href: "/gallery" },
-      { label: "Video Gallery", href: "/video-gallery" },
-      { label: "Awards & Achievements", href: "/media-awards" },
-      { label: "Testimonials", href: "/testimonials" },
-    ],
-  },
-  {
-    label: "Infrastructure",
-    href: "#",
-    icon: "Building2",
-    children: [
-      { label: "Our Campus", href: "/infrastructure/our-campus" },
-      { label: "Innovation Labs", href: "/infrastructure/innovation-labs" },
-      { label: "Sports Facilities", href: "/infrastructure/sports-facilities" },
-      { label: "Library", href: "/infrastructure/library" },
-    ],
-  },
+  // {
+  //   label: "Media",
+  //   href: "#",
+  //   icon: "Camera",
+  //   children: [
+  //     { label: "Picture Gallery", href: "/gallery" },
+  //     { label: "Video Gallery", href: "/video-gallery" },
+  //     { label: "Awards & Achievements", href: "/media-awards" },
+  //     { label: "Testimonials", href: "/testimonials" },
+  //   ],
+  // },
+  // {
+  //   label: "Infrastructure",
+  //   href: "#",
+  //   icon: "Building2",
+  //   children: [
+  //     { label: "Our Campus", href: "/infrastructure/our-campus" },
+  //     { label: "Innovation Labs", href: "/infrastructure/innovation-labs" },
+  //     { label: "Sports Facilities", href: "/infrastructure/sports-facilities" },
+  //     { label: "Library", href: "/infrastructure/library" },
+  //   ],
+  // },
   {
     label: "Contact Us",
     href: "/contact-us",
@@ -80,13 +80,13 @@ export const footerLinks = {
     { label: "About Us", href: "/our-school" },
     { label: "Admissions", href: "/admission-process" },
     { label: "Academics", href: "/curriculum/pre-primary" },
-    { label: "Gallery", href: "/gallery" },
+    // { label: "Gallery", href: "/gallery" },
     { label: "Contact Us", href: "/contact-us" },
   ],
   resources: [
     { label: "Pre-Primary", href: "/curriculum/pre-primary" },
     { label: "Middle School", href: "/curriculum/middle-secondary" },
-    { label: "Senior Secondary", href: "/curriculum/senior-secondary" },
+    // { label: "Senior Secondary", href: "/curriculum/senior-secondary" },
     { label: "Faculty", href: "/faculty" },
     { label: "Testimonials", href: "/testimonials" },
   ],
@@ -97,16 +97,19 @@ export const footerLinks = {
 };
 
 export const socialLinks = [
-  { label: "Facebook", href: "https://facebook.com/apexschool", icon: "Facebook" },
-  { label: "Twitter", href: "https://twitter.com/apexschool", icon: "Twitter" },
-  { label: "Instagram", href: "https://instagram.com/apexschool", icon: "Instagram" },
-  { label: "YouTube", href: "https://youtube.com/apexschool", icon: "Youtube" },
-  { label: "LinkedIn", href: "https://linkedin.com/company/apexschool", icon: "Linkedin" },
+  // { label: "Facebook", href: "https://facebook.com/apexschool", icon: "Facebook" },
+  // { label: "Twitter", href: "https://twitter.com/apexschool", icon: "Twitter" },
+  { label: "Instagram", href: "https://www.instagram.com/apextheschool?igsh=eXBmYzFjaDZyZDFm", icon: "Instagram" },
+  // { label: "YouTube", href: "https://youtube.com/apexschool", icon: "Youtube" },
+  // { label: "LinkedIn", href: "https://linkedin.com/company/apexschool", icon: "Linkedin" },
 ];
 
 export const contactInfo = {
-  address: "APEX Campus, Excellence Road, City 500001",
-  phone: "+91 40 1234 5678",
-  email: "info@apexschool.in",
+  addresses: [
+    "H.NO:- 18-13-8/A/16/H/6, Wadi E Farhan, Subhan Hills, Bandlaguda, Hyderabad, TS - 500005",
+    "16-4-14, MAM Center, Beside MAM Palace, Chanchalguda, Malakpet, Hyderabad",
+  ],
+  phone: "+91 79897 85346, +91 81429 74915",
+  email: "Info@apextheschool.in",
   hours: "Mon - Sat: 8:00 AM - 4:00 PM",
 };

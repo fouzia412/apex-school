@@ -117,7 +117,7 @@ export const AchievementsSection = () => {
         </div>
 
         {/* CTA */}
-        <motion.div
+        {/* <motion.div
           className="text-center mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ export const AchievementsSection = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </Button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

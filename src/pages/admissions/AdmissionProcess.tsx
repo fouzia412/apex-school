@@ -124,11 +124,15 @@ const AdmissionProcess = () => {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center mb-12" data-aos="fade-up">
               <Button variant="gold" size="lg">
-                Apply Online <ArrowRight className="w-4 h-4 ml-2" />
+                <Link to="/contact">Apply Online <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/contact"><Phone className="w-4 h-4 mr-2" /> Contact Admissions</Link>
-              </Button>
+  <a href="tel:+91798978534">
+    <Phone className="w-4 h-4 mr-2" />
+    Contact Admissions
+  </a>
+</Button>
+
             </div>
 
             {/* Contact Info */}
@@ -143,11 +147,11 @@ const AdmissionProcess = () => {
               <div className="flex flex-wrap justify-center gap-6">
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Phone className="w-5 h-5 text-primary" />
-                  <span>+91-XXXXX-XXXXX</span>
+                  <span> +91 79897 8534, +91 81429 74915</span>
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span>admissions@apexschool.edu</span>
+                  <span>Info@apextheschool.in</span>
                 </div>
               </div>
             </div>

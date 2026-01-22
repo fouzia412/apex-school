@@ -89,9 +89,17 @@ export const CTASection = () => {
                     <p className="text-sm text-primary-foreground/70 mb-1">
                       Visit Us
                     </p>
-                    <p className="font-heading font-semibold text-primary-foreground">
-                      {contactInfo.address}
-                    </p>
+                    <div className="space-y-2">
+  {contactInfo.addresses.map((address, index) => (
+    <p
+      key={index}
+      className="font-heading font-semibold text-primary-foreground"
+    >
+      {address}
+    </p>
+  ))}
+</div>
+
                     <p className="text-sm text-primary-foreground/70 mt-2">
                       {contactInfo.hours}
                     </p>

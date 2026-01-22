@@ -104,27 +104,27 @@ export const CampusLifeSection = () => {
                 <p className="body-sm text-primary-foreground/90 mb-4">
                   {area.description}
                 </p>
-                <Link
+                {/* <Link
                   to={area.link}
                   className="inline-flex items-center text-sm font-semibold text-secondary hover:gap-3 transition-all"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12" data-aos="fade-up">
+        {/* <div className="text-center mt-12" data-aos="fade-up">
           <Button variant="green" size="lg" asChild>
             <Link to="/infrastructure/our-campus">
               <Users className="w-5 h-5 mr-2" />
               Take a Virtual Tour
             </Link>
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

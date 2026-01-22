@@ -38,7 +38,7 @@ const ChairmanMessage = () => {
                 <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden mb-6 bg-muted">
                   {/* Replace src with actual image path */}
                   <img 
-                    src="/path-to-chairman-image.jpg" 
+                    src="/apex-chairman.png" 
                     alt="Dr. Khaja Abdul Mutalib - Chairman" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />

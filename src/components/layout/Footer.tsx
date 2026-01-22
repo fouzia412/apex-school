@@ -246,7 +246,7 @@ export const Footer = () => {
                 className="flex items-start gap-3 text-primary-foreground/70"
               >
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary/70" />
-                <span>{contactInfo.address}</span>
+                <span>{contactInfo.addresses[0]}</span>
               </motion.li>
               <motion.li
                 initial={{ opacity: 0, x: -10 }}
