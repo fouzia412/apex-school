@@ -147,7 +147,7 @@ const AdmissionProcess = () => {
               <div className="flex flex-wrap justify-center gap-6">
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Phone className="w-5 h-5 text-primary" />
-                  <span> +91 79897 8534, +91 81429 74915</span>
+                  <span> +91 79897 8534</span>
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Mail className="w-5 h-5 text-primary" />

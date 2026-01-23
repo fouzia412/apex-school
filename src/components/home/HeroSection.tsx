@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, Play, Award, Users, BookOpen, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-import heroSlide1 from '@/assets/hero-slide-1.jpg';
+import heroSlide1 from '@/assets/hero-slide-1.png';
 import heroSlide2 from '@/assets/hero-slide-2.jpg';
 import heroSlide3 from '@/assets/hero-slide-3.jpg';
 import heroSlide4 from '@/assets/hero-slide-4.jpg';
@@ -126,14 +126,14 @@ export const HeroSection = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary transition-all"
+        className="hidden md:flex absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary transition-all"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary transition-all"
+        className="hidden md:flex absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary transition-all"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />
@@ -179,12 +179,12 @@ export const HeroSection = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
-            <Button variant="glass" size="xl" asChild>
+            {/* <Button variant="glass" size="xl" asChild>
               <Link to="/infrastructure/our-campus">
                 <Play className="w-5 h-5 mr-2" />
                 Explore Campus
               </Link>
-            </Button>
+            </Button> */}
           </div>
 
           {/* Quick Stats */}

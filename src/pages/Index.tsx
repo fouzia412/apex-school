@@ -18,7 +18,7 @@ const Index = () => {
       <WhyChooseUsSection />
       {/* <StatsSection /> */}
       <CampusLifeSection />
-      <CampusSlider />
+      {/* <CampusSlider /> */}
       <PrincipalMessageSection />
       {/* <NewsSection /> */}
       <AchievementsSection />

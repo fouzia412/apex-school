@@ -62,10 +62,26 @@ export const Header = () => {
               {contactInfo.email}
             </a>
           </div>
-          <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4" />
-            <span>{contactInfo.address}</span>
-          </div>
+         {/* Addresses with Google Maps */}
+<div className="flex items-center gap-6">
+  {contactInfo.addresses.map((item, index) => (
+    <a
+      key={index}
+      href={item.mapUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 hover:text-secondary transition-colors"
+      title={`Open ${item.label} in Google Maps`}
+    >
+      <MapPin className="w-4 h-4 flex-shrink-0" />
+      <span className="truncate max-w-[280px]">
+        {item.label}
+      </span>
+    </a>
+  ))}
+</div>
+
+
         </div>
       </div>
 

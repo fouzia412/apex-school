@@ -157,6 +157,11 @@ export default {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "whatsapp-float": {
+  "0%, 100%": { transform: "translateY(0)" },
+  "50%": { transform: "translateY(-6px)" },
+},
+
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -173,6 +178,8 @@ export default {
         "spin-slow": "spin-slow 20s linear infinite",
         marquee: "marquee 30s linear infinite",
         "count-up": "count-up 0.6s ease-out forwards",
+        whatsapp: "whatsapp-float 2.8s ease-in-out infinite",
+
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
