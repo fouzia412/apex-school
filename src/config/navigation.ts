@@ -46,17 +46,17 @@ export const navigationConfig: NavItem[] = [
       { label: "FAQ", href: "/faq" },
     ],
   },
-  // {
-  //   label: "Media",
-  //   href: "#",
-  //   icon: "Camera",
-  //   children: [
-  //     { label: "Picture Gallery", href: "/gallery" },
-  //     { label: "Video Gallery", href: "/video-gallery" },
-  //     { label: "Awards & Achievements", href: "/media-awards" },
-  //     { label: "Testimonials", href: "/testimonials" },
-  //   ],
-  // },
+  {
+    label: "Media",
+    href: "#",
+    icon: "Camera",
+    children: [
+      { label: "Picture Gallery", href: "/gallery" },
+      // { label: "Video Gallery", href: "/video-gallery" },
+      // { label: "Awards & Achievements", href: "/media-awards" },
+      { label: "Testimonials", href: "/testimonials" },
+    ],
+  },
   // {
   //   label: "Infrastructure",
   //   href: "#",
@@ -111,14 +111,14 @@ export const contactInfo = {
       address:
         "18-13-8/A/16/H/6, Wadi E Farhan, Subhan Hills, Bandlaguda, Hyderabad, TS - 500005",
       mapUrl:
-        "https://www.google.com/maps?q=18-13-8/A/16/H/6,+Wadi+E+Farhan,+Subhan+Hills,+Bandlaguda,+Hyderabad,+TS+500005",
+        "https://maps.app.goo.gl/3mZXmZSwNkUkCFrB7?g_st=iw",
     },
     {
       label: "Malakpet Campus",
       address:
         "16-4-14, MAM Center, Beside MAM Palace, Chanchalguda, Malakpet, Hyderabad",
       mapUrl:
-        "https://www.google.com/maps?q=16-4-14,+MAM+Center,+Beside+MAM+Palace,+Chanchalguda,+Malakpet,+Hyderabad",
+        "https://maps.app.goo.gl/6DLvuPxT2Zcz7fFB6?g_st=iw",
     },
   ],
   phone: "+91 79897 85346",
