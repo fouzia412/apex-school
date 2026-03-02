@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 
 import heroSlide1 from '@/assets/hero-slide-1.png';
 import heroSlide2 from '@/assets/hero-slide-2.jpg';
-import heroSlide3 from '@/assets/hero-slide-3.jpg';
+import heroSlide3 from '@/assets/hero-slide-3.png';
 import heroSlide4 from '@/assets/hero-slide-4.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,7 +19,7 @@ const slides = [
     image: heroSlide1,
     title: 'Nurturing Future Leaders',
     subtitle: 'Where academic excellence meets holistic development',
-    badge: 'CBSE Affiliated | Excellence Since 2002',
+    badge: 'Excellence Since 2002',
   },
   {
     id: 2,
@@ -35,13 +35,13 @@ const slides = [
     subtitle: 'Building champions through world-class sports facilities',
     badge: 'State & National Champions',
   },
-  {
-    id: 4,
-    image: heroSlide4,
-    title: 'Cultural Heritage',
-    subtitle: 'Celebrating diversity through art, music, and dance',
-    badge: 'Holistic Development',
-  },
+  // {
+  //   id: 4,
+  //   image: heroSlide4,
+  //   title: 'Cultural Heritage',
+  //   subtitle: 'Celebrating diversity through art, music, and dance',
+  //   badge: 'Holistic Development',
+  // },
 ];
 
 export const HeroSection = () => {
