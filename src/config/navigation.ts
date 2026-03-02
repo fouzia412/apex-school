@@ -88,7 +88,7 @@ export const footerLinks = {
     { label: "Middle School", href: "/curriculum/middle-secondary" },
     // { label: "Senior Secondary", href: "/curriculum/senior-secondary" },
     { label: "Faculty", href: "/faculty" },
-    { label: "Testimonials", href: "/testimonials" },
+    // { label: "Testimonials", href: "/testimonials" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },

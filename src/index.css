@@ -11,9 +11,9 @@
     --apex-red: 0 85% 50%;
     --apex-red-light: 0 80% 60%;
     --apex-red-dark: 0 90% 35%;
-    --apex-gold: 43 96% 50%;
-    --apex-gold-light: 43 90% 60%;
-    --apex-gold-dark: 40 90% 40%;
+ --apex-gold: 39 67% 45%;        /* #BD8926 */
+--apex-gold-light: 39 67% 55%;
+--apex-gold-dark: 39 67% 35%;
     --apex-blue: 210 90% 45%;
     --apex-blue-light: 210 80% 55%;
     --apex-blue-dark: 210 95% 30%;
@@ -33,7 +33,7 @@
     --primary: 0 85% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 43 96% 50%;
+    --secondary: 39 67% 45%;
     --secondary-foreground: 0 0% 8%;
 
     --muted: 0 0% 96%;

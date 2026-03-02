@@ -39,7 +39,8 @@ const OurSchool = () => {
   </p>
 
   <p className="text-muted-foreground leading-relaxed">
-    Our journey began as a humble seed — a vision to provide quality education rooted in values. Today, that seed has grown into a flourishing sanctuary of learning. We don’t just teach; we sow the seeds of character, resilience, and wisdom, shaping confident learners ready for the future.
+    Our journey began as a humble seed — a vision to provide quality education rooted in values. Today, that seed has grown into a flourishing sanctuary of learning. We don’t just teach; we sow the seeds of character, resilience, and wisdom.
+     
   </p>
 </motion.div>
 
