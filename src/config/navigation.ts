@@ -54,7 +54,7 @@ export const navigationConfig: NavItem[] = [
       { label: "Picture Gallery", href: "/gallery" },
       // { label: "Video Gallery", href: "/video-gallery" },
       // { label: "Awards & Achievements", href: "/media-awards" },
-      { label: "Testimonials", href: "/testimonials" },
+      // { label: "Testimonials", href: "/testimonials" },
     ],
   },
   // {
