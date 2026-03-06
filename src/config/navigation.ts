@@ -18,7 +18,9 @@ export const navigationConfig: NavItem[] = [
     icon: "Building",
     children: [
       { label: "Our School", href: "/our-school" },
-      { label: "Mission & Vision", href: "/mission-vision" },
+      { label: "Mission ", href: "/mission" },
+      { label: "Vision", href: "/vision" },
+      // { label: "Mission & Vision", href: "/mission-vision" },
       // { label: "Principal's Message", href: "/principal-message" },
       { label: "Chairman's Message", href: "/chairman-message" },
       { label: "Director's Message", href: "/director-message" },
@@ -30,10 +32,10 @@ export const navigationConfig: NavItem[] = [
     href: "#",
     icon: "BookOpen",
     children: [
-      { label: "Pre-Primary & Primary", href: "/curriculum/pre-primary" },
+      { label: "Curriculum & Primary", href: "/curriculum/pre-primary" },
       { label: "Middle & Secondary School", href: "/curriculum/middle-secondary" },
       // { label: "Senior Secondary School", href: "/curriculum/senior-secondary" },
-      { label: "Faculty", href: "/faculty" },
+      { label: "Our Faculty", href: "/faculty" },
     ],
   },
   {

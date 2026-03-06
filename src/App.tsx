@@ -12,6 +12,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import FeeStructure from "./pages/admissions/FeeStructure";
 import FaqPage from "./pages/admissions/FaqPage";
+import Vision from "./pages/about/Vision";
+import Mission from "./pages/about/Mission";
 
 // Lazy loaded pages - About
 const OurSchool = lazy(() => import("./pages/about/OurSchool"));
@@ -71,6 +73,8 @@ const App = () => (
               {/* About Us */}
               <Route path="/our-school" element={<OurSchool />} />
               <Route path="/mission-vision" element={<MissionVision />} />
+              <Route path="/mission" element={<Mission />} />
+              <Route path="/vision" element={<Vision />} />
               <Route path="/principal-message" element={<PrincipalMessage />} />
               <Route path="/chairman-message" element={<ChairmanMessage />} />
               <Route path="/director-message" element={<DirectorMessage />} />

@@ -53,7 +53,7 @@ export const PageHero = ({ title, subtitle, backgroundImage, breadcrumbs = [] }:
             className="w-full h-[120%] object-cover"
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-primary via-dps-green to-dps-green-dark" />
+          <div className="w-full h-full bg-[#0E304C]" />
         )}
         <div className="absolute inset-0 bg-gradient-to-r from-dps-green-dark/95 via-dps-green/80 to-dps-green-dark/70" />
         <div className="absolute inset-0 bg-gradient-to-t from-dps-green-dark/60 via-transparent to-transparent" />
