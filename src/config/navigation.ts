@@ -86,7 +86,7 @@ export const footerLinks = {
     { label: "Contact Us", href: "/contact-us" },
   ],
   resources: [
-    { label: "Pre-Primary", href: "/curriculum/pre-primary" },
+    { label: "Curriculum", href: "/curriculum/pre-primary" },
     { label: "Middle School", href: "/curriculum/middle-secondary" },
     // { label: "Senior Secondary", href: "/curriculum/senior-secondary" },
     { label: "Faculty", href: "/faculty" },
