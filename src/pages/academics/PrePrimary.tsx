@@ -26,10 +26,10 @@ const PrePrimary = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="pre-primary" className="max-w-6xl mx-auto">
-            <TabsList className="grid grid-cols-3 w-full max-w-lg mx-auto mb-12">
-              <TabsTrigger value="pre-primary">Pre-Primary & Primary</TabsTrigger>
-              <TabsTrigger value="primary-assessment">Primary (3-5)</TabsTrigger>
-              <TabsTrigger value="middle-secondary">Middle & Secondary</TabsTrigger>
+            <TabsList className="grid grid-cols-3 w-full max-w-lg mx-auto mb-12 ">
+              <TabsTrigger value="pre-primary" className="font-bold">Pre-Primary & Primary</TabsTrigger>
+              <TabsTrigger value="primary-assessment" className="font-bold">Primary (3-5)</TabsTrigger>
+              <TabsTrigger value="middle-secondary" className="font-bold">Middle & Secondary</TabsTrigger>
             </TabsList>
 
             {/* Pre-Primary & Primary (K-2) */}
